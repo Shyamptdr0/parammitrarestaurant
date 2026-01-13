@@ -39,14 +39,14 @@ export const metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://www.parammitrarestuarant.in'),
+  metadataBase: new URL('https://www.parammitrarestaurant.in'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     title: "Param Mitra Family Restaurant | Pure Vegetarian Restaurant in Dhargaon",
     description: "Experience authentic vegetarian cuisine at Param Mitra Family Restaurant in Dhargaon. Serving pure vegetarian food with traditional flavors and family-friendly dining.",
-    url: 'https://www.parammitrarestuarant.in',
+    url: 'https://www.parammitrarestaurant.in',
     siteName: 'Param Mitra Family Restaurant',
     images: [
       {
@@ -110,7 +110,7 @@ export default function RootLayout({ children }) {
               "name": "Param Mitra Family Restaurant",
               "alternateName": "परम मित्र रेस्टोरेंट",
               "description": "Pure vegetarian family restaurant serving authentic Indian cuisine with traditional flavors in Dhargaon, Madhya Pradesh",
-              "url": "https://www.parammitrarestuarant.in",
+              "url": "https://www.parammitrarestaurant.in",
               "telephone": "+918085902662",
               "address": {
                 "@type": "PostalAddress",
@@ -132,10 +132,10 @@ export default function RootLayout({ children }) {
                 "Mo-Su 18:00-23:00"
               ],
               "acceptsReservations": "Yes",
-              "menu": "https://www.parammitrarestuarant.in/menu",
+              "menu": "https://www.parammitrarestaurant.in/menu",
               "image": [
-                "https://www.parammitrarestuarant.in/logo.png",
-                "https://www.parammitrarestuarant.in/image2.png"
+                "https://www.parammitrarestaurant.in/logo.png",
+                "https://www.parammitrarestaurant.in/image2.png"
               ],
               "aggregateRating": {
                 "@type": "AggregateRating",
