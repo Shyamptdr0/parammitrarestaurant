@@ -1,5 +1,5 @@
 import Image from "next/image";
-import heroImage from "../../public/image2.png"
+import heroImage from "../../public/image2.webp"
 import { Facebook, Instagram, Phone, MessageCircle, Leaf, Sprout, Home } from "lucide-react";
 
 
@@ -38,11 +38,14 @@ export default function HomePage() {
 						{/* Social Icons */}
 						<div className="absolute top-4 left-4 md:absolute md:left-6 md:top-auto md:flex md:flex-col flex-row gap-2 md:gap-4 z-20 hidden">
 
-							<a href="#" className="group p-2 bg-white/80 rounded-full hover:bg-[#7a2e1d] transition">
-								<Facebook className="w-4 h-4 md:w-5 md:h-5 text-[#7a2e1d] group-hover:text-white transition" />
-							</a>
+							
 
-							<a href="#" className="group p-2 bg-white/80 rounded-full hover:bg-[#7a2e1d] transition">
+							<a
+								href="https://www.instagram.com/parammitra_family_restaurant/"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="group p-2 bg-white/80 rounded-full hover:bg-[#7a2e1d] transition"
+							>
 								<Instagram className="w-4 h-4 md:w-5 md:h-5 text-[#7a2e1d] group-hover:text-white transition" />
 							</a>
 
@@ -163,7 +166,7 @@ export default function HomePage() {
 
 							<div className="relative">
 								<Image
-									src="/image3.png"
+									src="/image3.webp"
 									alt="About Param Mitra Restaurant"
 									width={460}
 									height={460}
@@ -250,9 +253,7 @@ export default function HomePage() {
 					</div>
 				</div>
 			</section>
-
-
-
+			
 
 
 			{/* Menu Highlights Section */}
@@ -430,27 +431,17 @@ export default function HomePage() {
 
 					<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 						{/* Left Side - Interactive Map */}
-						<div className="bg-white/10 backdrop-blur-md rounded-3xl p-6 h-96 flex items-center justify-center border border-white/20">
-							<div className="text-center">
-								<div className="w-20 h-20 mx-auto mb-4 bg-white/20 rounded-full flex items-center justify-center">
-									<svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
-										<path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-									</svg>
-								</div>
-								<h4 className="text-xl font-semibold mb-2">Interactive Map</h4>
-								<p className="text-white/80 mb-4">Click to navigate</p>
-								<a
-									href="https://maps.google.com/?q=Param+Mitra+Restaurant+Khargone"
-									target="_blank"
-									rel="noopener noreferrer"
-									className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[#7a2e1d] rounded-full hover:bg-gray-100 transition font-semibold"
-								>
-									<svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-										<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-									</svg>
-									Open in Google Maps
-								</a>
-							</div>
+						<div className="bg-white/10 backdrop-blur-md rounded-3xl p-2 h-96 border border-white/20">
+							<iframe
+								src="https://maps.google.com/maps?q=Param+Mitra+Family+Restaurant,+Main+Road+Mandleswar,+Dhargaon,+Khargone,+Madhya+Pradesh&t=&z=15&ie=UTF8&iwloc=&output=embed"
+								width="100%"
+								height="100%"
+								style={{ border: 0 }}
+								allowFullScreen=""
+								loading="lazy"
+								referrerPolicy="no-referrer-when-downgrade"
+								className="rounded-2xl"
+							></iframe>
 						</div>
 
 						{/* Right Side - Contact Info */}
