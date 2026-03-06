@@ -1,14 +1,15 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Poppins, Inter } from "next/font/google";
 import "./globals.css";
 import LoadingScreen from "@/components/LoadingScreen";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
@@ -111,7 +112,7 @@ export default function RootLayout({ children }) {
               "alternateName": "परम मित्र रेस्टोरेंट",
               "description": "Pure vegetarian family restaurant serving authentic Indian cuisine with traditional flavors in Dhargaon, Madhya Pradesh",
               "url": "https://www.parammitrarestaurant.in",
-              "telephone": "+918085902662",
+              "telephone": "+9108065487271",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "Main Road Mandleswar, Dhargaon",
@@ -151,7 +152,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.variable} ${poppins.variable} font-sans antialiased bg-[#fffaf3] text-gray-900`}
       >
         <LoadingScreen />
         {children}
