@@ -28,110 +28,149 @@ export default function HomePage() {
 				className="relative min-h-screen bg-no-repeat bg-cover bg-center overflow-hidden"
 				style={{ backgroundImage: "url('/bg-image3.jpg')" }}
 			>
-				{/* Refined gradient overlay for premium feel */}
-				<div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/40 to-[#7a2e1d]/30"></div>
+				{/* Rich gradient overlay for premium depth */}
+				<div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/50 to-[#7a2e1d]/40"></div>
 				
-				<div className="relative z-10 min-h-screen flex flex-col">
+				<div className="relative z-10 min-h-screen flex flex-col pt-6 md:pt-10">
 
-					{/* Header */}
+					{/* Floating Glass Header */}
 					<motion.header 
-						initial={{ opacity: 0, y: -20 }}
+						initial={{ opacity: 0, y: -30 }}
 						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.8, ease: "easeOut" }}
-						className="flex items-center gap-4 px-6 md:px-12 pt-8"
+						transition={{ duration: 1, ease: "easeOut" }}
+						className="max-w-7xl mx-auto w-full px-6 flex items-center justify-between"
 					>
-						<Image
-							src="/logo.png"
-							alt="Param Mitra Restaurant Logo"
-							width={88}
-							height={88}
-							className="w-16 h-16 md:w-[88px] md:h-[88px] drop-shadow-lg"
-						/>
-						<div>
-							<h1 className="text-xl md:text-2xl font-bold text-white tracking-wide drop-shadow-md font-heading">
-								परम मित्र
-							</h1>
-							<p className="text-xs md:text-sm tracking-widest uppercase text-[#f4c37a] font-medium drop-shadow-md">
-								Family Restaurant
-							</p>
+						<div className="flex items-center gap-4">
+							<Image
+								src="/logo.png"
+								alt="Param Mitra Restaurant Logo"
+								width={88}
+								height={88}
+								className="w-16 h-16 md:w-[88px] md:h-[88px] drop-shadow-[0_10px_15px_rgba(0,0,0,0.5)]"
+							/>
+							<div>
+								<h1 className="text-2xl md:text-3xl font-bold text-white tracking-wide drop-shadow-md font-heading">
+									परम मित्र
+								</h1>
+								<p className="text-[10px] md:text-xs tracking-[0.3em] uppercase text-[#f4c37a] font-semibold drop-shadow-md">
+									Family Restaurant
+								</p>
+							</div>
 						</div>
+						
+						{/* Optional: Add a call to action or hamburger menu here later */}
 					</motion.header>
 
 					{/* Hero */}
-					<div className="relative flex-1 flex flex-col-reverse md:flex-row items-center justify-center px-6 md:px-12 py-10 md:py-0">
+					<div className="relative flex-1 flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto w-full px-6 md:pl-28 md:pr-6 py-12 md:py-0">
 
 						{/* Left Content */}
 						<motion.div 
 							variants={staggerContainer}
 							initial="hidden"
 							animate="visible"
-							className="w-full md:w-1/2 text-center md:text-left mt-16 md:mt-0 z-10"
+							className="w-full md:w-1/2 text-center md:text-left z-10 flex flex-col items-center md:items-start pb-20 md:pb-0"
 						>
-							<motion.div variants={fadeInUp} className="inline-block mb-4 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm tracking-widest uppercase shadow-lg">
-								<span className="text-[#f4c37a]">Est.</span> 2026
+							<motion.div variants={fadeInUp} className="inline-flex items-center gap-2 mb-6 px-5 py-2 rounded-full bg-white/5 backdrop-blur-md border border-white/10 text-white text-xs md:text-sm tracking-[0.2em] uppercase shadow-2xl">
+								<span className="w-2 h-2 rounded-full bg-[#f4c37a] animate-pulse"></span>
+								<span className="text-gray-200">Established 2026</span>
 							</motion.div>
 							
-							<motion.h2 variants={fadeInUp} className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-tight font-heading drop-shadow-2xl">
-								स्वाद जो <br /> <span className="text-[#f4c37a]">घर की याद</span> दिलाए
+							<motion.h2 
+								variants={fadeInUp} 
+								className="text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-bold text-white leading-[1.1] font-heading drop-shadow-2xl"
+							>
+								स्वाद जो <br /> 
+								<span className="text-transparent bg-clip-text bg-gradient-to-r from-[#f4c37a] via-[#ffe3b5] to-white">
+									घर की याद
+								</span> 
+								<br /> दिलाए
 							</motion.h2>
 							
-							<motion.p variants={fadeInUp} className="mt-6 text-base md:text-xl text-gray-200 font-light max-w-lg mx-auto md:mx-0 drop-shadow-lg">
-								शुद्ध शाकाहारी • पारंपरिक स्वाद • परिवार के लिए उत्तम
+							<motion.p variants={fadeInUp} className="mt-8 text-lg md:text-xl text-gray-300 font-light max-w-md mx-auto md:mx-0 drop-shadow-lg leading-relaxed">
+								Experience the warmth of family dining with our pure vegetarian, traditionally crafted delicacies.
 							</motion.p>
-							
-							<motion.div variants={fadeInUp} className="mt-10 flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">
-								<button className="w-full sm:w-auto px-8 py-4 bg-[#7a2e1d] text-white rounded-full hover:bg-[#5e2216] transition shadow-[0_0_20px_rgba(122,46,29,0.4)] hover:shadow-[0_0_30px_rgba(122,46,29,0.6)] font-semibold text-lg transform hover:-translate-y-1">
-									Explore Our Restaurant
-								</button>
-								<div className="flex gap-4 items-center">
-									<a
-										href="https://www.instagram.com/parammitra_family_restaurant/"
-										target="_blank"
-										rel="noopener noreferrer"
-										className="p-3 bg-white/10 backdrop-blur-md rounded-full hover:bg-[#7a2e1d] transition border border-white/20 hover:border-transparent text-white hover:text-white"
-									>
-										<Instagram className="w-5 h-5" />
-									</a>
-									<a href="tel:+9108065487271" className="p-3 bg-white/10 backdrop-blur-md rounded-full hover:bg-[#7a2e1d] transition border border-white/20 hover:border-transparent text-white hover:text-white">
-										<Phone className="w-5 h-5" />
-									</a>
-									<a
-										href="https://wa.me/9108065487271"
-										target="_blank"
-										rel="noopener noreferrer"
-										className="p-3 bg-white/10 backdrop-blur-md rounded-full hover:bg-[#7a2e1d] transition border border-white/20 hover:border-transparent text-white hover:text-white"
-									>
-										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="w-5 h-5 fill-current">
-											<path d="M19.11 17.21c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.15-.42-2.2-1.34-.82-.73-1.38-1.63-1.54-1.9-.16-.27-.02-.41.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.44-.46-.61-.46h-.52c-.18 0-.48.07-.73.34-.25.27-.96.93-.96 2.26s.98 2.61 1.11 2.79c.14.18 1.93 2.94 4.68 4.12.66.28 1.17.45 1.57.58.66.21 1.25.18 1.72.11.53-.08 1.6-.66 1.83-1.3.23-.64.23-1.18.16-1.3-.07-.11-.25-.18-.52-.32zM16 2.67C8.83 2.67 3 8.5 3 15.67c0 2.28.6 4.49 1.74 6.43L3 29l7.07-1.86a12.93 12.93 0 005.93 1.46h.01c7.17 0 13-5.83 13-13S23.17 2.67 16 2.67zm0 23.6c-1.93 0-3.82-.52-5.48-1.51l-.39-.23-4.2 1.11 1.12-4.08-.25-.4a10.84 10.84 0 01-1.65-5.79C5.15 9.42 9.42 5.15 16 5.15c6.58 0 10.85 4.27 10.85 10.52 0 6.26-4.27 10.6-10.85 10.6z" />
-										</svg>
-									</a>
-								</div>
-							</motion.div>
 						</motion.div>
-
+						
+						{/* Vertical Social Icons Bar (Left) */}
+						<motion.div 
+							initial={{ opacity: 0, x: -20 }}
+							animate={{ opacity: 1, x: 0 }}
+							transition={{ duration: 1, delay: 0.5 }}
+							className="absolute left-6 top-1/2 -translate-y-1/2 hidden md:flex flex-col gap-6 z-20"
+						>
+							<div className="w-[1px] h-24 bg-gradient-to-b from-transparent to-white/30 mx-auto mb-2"></div>
+							
+							<a
+								href="https://www.instagram.com/parammitra_family_restaurant/"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="group p-3 bg-white/5 backdrop-blur-md rounded-full hover:bg-white/20 transition-all duration-300 border border-white/10 hover:border-[#f4c37a]/50 text-white hover:text-[#f4c37a] shadow-xl"
+							>
+								<Instagram className="w-5 h-5 group-hover:scale-110 transition-transform" />
+							</a>
+							<a href="tel:+9108065487271" className="group p-3 bg-white/5 backdrop-blur-md rounded-full hover:bg-white/20 transition-all duration-300 border border-white/10 hover:border-[#f4c37a]/50 text-white hover:text-[#f4c37a] shadow-xl">
+								<Phone className="w-5 h-5 group-hover:scale-110 transition-transform" />
+							</a>
+							<a
+								href="https://wa.me/9108065487271"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="group p-3 bg-white/5 backdrop-blur-md rounded-full hover:bg-white/20 transition-all duration-300 border border-white/10 hover:border-[#f4c37a]/50 text-white hover:text-[#f4c37a] shadow-xl"
+							>
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="w-5 h-5 fill-current group-hover:scale-110 transition-transform">
+									<path d="M19.11 17.21c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.15-.42-2.2-1.34-.82-.73-1.38-1.63-1.54-1.9-.16-.27-.02-.41.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.44-.46-.61-.46h-.52c-.18 0-.48.07-.73.34-.25.27-.96.93-.96 2.26s.98 2.61 1.11 2.79c.14.18 1.93 2.94 4.68 4.12.66.28 1.17.45 1.57.58.66.21 1.25.18 1.72.11.53-.08 1.6-.66 1.83-1.3.23-.64.23-1.18.16-1.3-.07-.11-.25-.18-.52-.32zM16 2.67C8.83 2.67 3 8.5 3 15.67c0 2.28.6 4.49 1.74 6.43L3 29l7.07-1.86a12.93 12.93 0 005.93 1.46h.01c7.17 0 13-5.83 13-13S23.17 2.67 16 2.67zm0 23.6c-1.93 0-3.82-.52-5.48-1.51l-.39-.23-4.2 1.11 1.12-4.08-.25-.4a10.84 10.84 0 01-1.65-5.79C5.15 9.42 9.42 5.15 16 5.15c6.58 0 10.85 4.27 10.85 10.52 0 6.26-4.27 10.6-10.85 10.6z" />
+								</svg>
+							</a>
+							<div className="w-[1px] h-24 bg-gradient-to-t from-transparent to-white/30 mx-auto mt-2"></div>
+						</motion.div>
+						
 						{/* Right Image */}
 						<motion.div 
-							initial={{ opacity: 0, scale: 0.9, rotate: -5 }}
+							initial={{ opacity: 0, scale: 0.9, rotate: -2 }}
 							animate={{ opacity: 1, scale: 1, rotate: 0 }}
-							transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-							className="w-full md:w-1/2 flex justify-center md:justify-end mt-10 md:mt-0 relative"
+							transition={{ duration: 1.2, ease: "easeOut", delay: 0.3 }}
+							className="w-full md:w-1/2 flex justify-center md:justify-end mt-16 md:mt-0 relative"
 						>
-							<div className="absolute inset-0 bg-[#f4c37a]/20 rounded-full blur-[100px] transform scale-75"></div>
-							<Image
-								src={heroImage}
-								alt="Restaurant Food"
-								priority
-								className="w-[280px] sm:w-[380px] md:w-[600px] lg:w-[700px] h-auto drop-shadow-[0_40px_50px_rgba(0,0,0,0.5)] z-10 animate-[bounce_10s_infinite]"
-							/>
+							<div className="absolute inset-0 bg-gradient-to-tr from-[#7a2e1d]/40 to-[#f4c37a]/20 rounded-full blur-[120px] transform scale-90 mix-blend-screen"></div>
+							
+							<motion.div
+								animate={{ y: [0, -20, 0] }}
+								transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+								className="relative z-10"
+							>
+								<Image
+									src={heroImage}
+									alt="Restaurant Food"
+									priority
+									className="w-[300px] sm:w-[400px] md:w-[600px] lg:w-[750px] h-auto drop-shadow-[0_45px_65px_rgba(0,0,0,0.6)]"
+								/>
+							</motion.div>
 						</motion.div>
 
 					</div>
+					
+					{/* Scroll Down Indicator */}
+					<motion.div 
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						transition={{ delay: 1.5, duration: 1 }}
+						className="absolute bottom-16 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 z-30 pointer-events-none hidden md:flex"
+					>
+						<span className="text-gray-400 text-xs tracking-widest uppercase font-medium">Scroll</span>
+						<motion.div 
+							animate={{ y: [0, 8, 0] }}
+							transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+							className="w-5 h-8 border-2 border-gray-400 rounded-full flex justify-center p-1"
+						>
+							<div className="w-1 h-2 bg-[#f4c37a] rounded-full"></div>
+						</motion.div>
+					</motion.div>
 				</div>
 
 				{/* Beautiful soft fade to the next section */}
-				<div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-[#fffaf3] to-transparent z-20 pointer-events-none"></div>
+				<div className="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-t from-[#fffaf3] to-transparent z-20 pointer-events-none"></div>
 			</section>
-
 
 
 			{/* About Section */}
